@@ -10,7 +10,7 @@
     {{-- NAVBAR mobile only --}}
     <x-nav sticky full-width>
         <x-slot:brand>
-            <x-app-brand />
+            <x-app-logo />
         </x-slot:brand>
         <x-slot:actions>
             <div class="flex items-center gap-2">
@@ -39,17 +39,19 @@
             <x-menu activate-by-route>
                 <x-menu-separator />
 
-                <x-menu-item title="Hello" icon="o-sparkles" link="/" />
+                <x-menu-item title="Início" icon="o-home" :link="route('admin.index')" />
 
-                <x-menu-sub title="Settings" icon="o-cog-6-tooth">
+                {{-- <x-menu-sub title="Settings" icon="o-cog-6-tooth">
                     <x-menu-item title="Wifi" icon="o-wifi" link="####" />
                     <x-menu-item title="Archives" icon="o-archive-box" link="####" />
-                </x-menu-sub>
+                </x-menu-sub> --}}
             </x-menu>
         </x-slot:sidebar>
 
         {{-- The `$slot` goes here --}}
         <x-slot:content>
+            <x-admin.breadcrumbs />
+
             {{ $slot }}
         </x-slot:content>
     </x-main>
