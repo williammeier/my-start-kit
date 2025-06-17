@@ -1,11 +1,13 @@
 <?php
 
-namespace App\Livewire;
+namespace App\Livewire\Admin;
 
 use Illuminate\Support\Collection;
+use Livewire\Attributes\Layout;
 use Livewire\Component;
 use Mary\Traits\Toast;
 
+#[Layout('components.layouts.app', ['title' => 'Início'])]
 class Welcome extends Component
 {
     use Toast;
@@ -61,7 +63,7 @@ class Welcome extends Component
 
     public function render()
     {
-        return view('livewire.welcome', [
+        return view('livewire.admin.welcome', [
             'users' => $this->users(),
             'headers' => $this->headers()
         ]);

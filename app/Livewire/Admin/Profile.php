@@ -13,7 +13,6 @@ use Illuminate\Validation\Rules\Password as PasswordRule;
 use Livewire\Attributes\Layout;
 
 #[Layout('components.layouts.app', ['title' => 'Perfil'])]
-
 class Profile extends Component
 {
     public string $name = '';
