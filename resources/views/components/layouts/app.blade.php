@@ -38,7 +38,7 @@
             class="bg-base-100 lg:bg-inherit">
 
             {{-- MENU --}}
-            <x-menu activate-by-route>
+            <x-menu activate-by-route :title="$title ?? null">
                 <x-menu-separator />
 
                 <x-menu-item title="Início" icon="o-home" :link="route('admin.index')" />
