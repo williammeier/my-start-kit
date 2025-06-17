@@ -10,7 +10,9 @@
     {{-- NAVBAR mobile only --}}
     <x-nav sticky full-width>
         <x-slot:brand>
-            <x-app-logo />
+            <a href="{{ route('admin.index') }}" wire:navigate>
+                <x-app-logo />
+            </a>
         </x-slot:brand>
         <x-slot:actions>
             <div class="flex items-center gap-2">
