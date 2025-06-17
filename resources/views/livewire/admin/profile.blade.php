@@ -1,7 +1,7 @@
-<section class="w-full space-y-5">
+<section class="w-full space-y-5 mt-5">
     <x-card>
         <div class="relative w-full">
-            <x-header title="Perfil" subtitle="Altere seus dados" class="!mb-0" separator />
+            <x-header :title="__('Profile')" subtitle="Altere seus dados" class="!mb-0" separator />
         </div>
     </x-card>
 
